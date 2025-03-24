@@ -34,7 +34,8 @@ public class GameMenuManager {
 
 
         this.snakeGame.add(menuPanel);
-
+        this.snakeGame.repaint();
+        this.snakeGame.revalidate();
     }
 
 

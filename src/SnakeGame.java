@@ -76,6 +76,8 @@ public class SnakeGame extends JPanel implements Runnable {
 
     public void initializeBoard(){
         add(pauseButton);
+        this.placeFood();
+        this.snakeBody.clear();
 
     }
     
@@ -93,6 +95,9 @@ public class SnakeGame extends JPanel implements Runnable {
         }
         else if (gameState == GameState.PAUSED) {
             drawSnakeBoard(g);
+        } else if (gameState == GameState.GAME_OVER) {
+            drawSnakeBoard(g);
+            this.gameMenuManager.draw(g);
         }
 
     }
